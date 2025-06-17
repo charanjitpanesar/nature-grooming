@@ -74,7 +74,7 @@ const ProductGallerySlider = () => {
                                             >
                                                 {
                                                     slideData?.map((val,i)=>(
-                                                        <SwiperSlide>
+                                                        <SwiperSlide key={i}>
                                                             <div className='slide_inner'>
                                                                 <div className='image_area'>
                                                                     <Image
@@ -113,7 +113,7 @@ const ProductGallerySlider = () => {
                                             >
                                                  {
                                                     slideData?.map((val,i)=>(
-                                                        <SwiperSlide>
+                                                        <SwiperSlide key={i}>
                                                             <div className='slide_inner'>
                                                                 <div className='image_area'>
                                                                     <Image
