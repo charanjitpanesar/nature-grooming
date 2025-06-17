@@ -1,0 +1,270 @@
+@use "../base/variable.scss" as variable;
+@use "../base/mixins.scss" as mixins;
+
+
+.list_view_card{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    .left_side{
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+        border: 1px solid variable.$light_grey;
+        flex-shrink: 0;
+        .image_area{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            &:hover{
+                img{
+                    @include mixins.scale(1.1);
+                }
+            }
+            img{
+                @include mixins.transition(all 0.3s ease-in-out);
+            }
+        }
+    }
+    .right_side{
+        flex-grow: 1;
+        h3{
+            font-size: 28px;
+            font-weight: 500;
+            color: variable.$black;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            color: variable.$grey;
+            padding-top: 10px;
+        }
+        .rating_list{
+            ul{
+                display: flex;
+                padding-top: 10px;
+                gap: 4px;
+                li{
+                    &.active{
+                        i{
+                            color: variable.$star_color;
+                        }
+                    }
+                    i{
+                        font-size: 14px;
+                        color: variable.$light_grey;
+                    }
+                }
+            }
+            
+        }
+        .price_area{
+            padding-top: 10px;
+            gap: 10px;
+            display: flex;
+            .actual_price{
+                font-weight: 500;
+                color: variable.$black;
+                font-size: 18px;
+            }   
+            .off_price{
+                font-weight: 500;
+                color: variable.$primary_color;
+                font-size: 18px;
+                text-decoration: line-through;
+            }
+        }
+        .lower_content{
+            display: flex;
+            align-items: center;
+            padding-top: 15px;
+            gap: 15px;
+            .left{
+                a{
+                    color: variable.$grey;
+                    font-size: 16px;
+                    font-weight: 400;
+                    &:hover{
+                        color: variable.$primary_color;
+                    }
+                }
+            }
+            .right{
+                display: flex;
+                gap: 15px;
+                a{
+                    color: variable.$grey;
+                    font-size: 16px;
+                    font-weight: 400;
+                    &:hover{
+                        color: variable.$primary_color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* 1680 desktop */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* 1600 desktop */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Above 1400 and Below 1599 Desktop*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+/* 1300 desktop only */
+@media (min-width: 1300px) and (max-width: 1399px) {}
+
+/* 1200 desktop only */
+@media (min-width: 1200px) and (max-width: 1299px) {}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .list_view_card{
+        .left_side{
+            width: 250px;
+            height: 250px;
+        }
+        .right_side{
+            h3{
+                font-size: 24px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .list_view_card{
+        .left_side{
+            width: 250px;
+            height: 250px;
+        }
+        .right_side{
+            h3{
+                font-size: 24px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .list_view_card{
+        .left_side{
+            width: 200px;
+            height: 200px;
+        }
+        .right_side{
+            h3{
+                font-size: 22px;
+            }
+            p{
+                font-size: 14px;
+                padding-top: 8px;
+            }
+            .price_area{
+                .actual_price{
+                    font-size: 16px;
+                }
+                .off_price{
+                    font-size: 16px;
+                }
+            }
+            .lower_content{
+                .left a{
+                    font-size: 14px;
+                }
+                .right a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+    .list_view_card{
+        flex-direction: column;
+        .left_side{
+            width: 100%;
+            height: 300px;
+        }
+        .right_side{
+            h3{
+                font-size: 22px;
+            }
+            p{
+                font-size: 14px;
+                padding-top: 8px;
+            }
+            .price_area{
+                .actual_price{
+                    font-size: 16px;
+                }
+                .off_price{
+                    font-size: 16px;
+                }
+            }
+            .lower_content{
+                .left a{
+                    font-size: 14px;
+                }
+                .right a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .list_view_card{
+        flex-direction: column;
+        .left_side{
+            width: 100%;
+            height: 300px;
+        }
+        .right_side{
+            h3{
+                font-size: 22px;
+            }
+            p{
+                font-size: 14px;
+                padding-top: 8px;
+            }
+            .price_area{
+                .actual_price{
+                    font-size: 16px;
+                }
+                .off_price{
+                    font-size: 16px;
+                }
+            }
+            .lower_content{
+                .left a{
+                    font-size: 14px;
+                }
+                .right a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}

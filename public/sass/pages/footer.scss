@@ -1,0 +1,553 @@
+@use "../base/variable.scss" as variable;
+@use "../base/mixins.scss" as mixins;
+
+
+.newsletter_section{
+    padding: 40px 0;
+    background: variable.$newsletter_bg;
+    .parent_area{
+        .left_area{
+            h3{
+                font-size: 25px;
+                font-weight: 400;
+                color: variable.$white;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 400;
+                color: variable.$white;
+                padding-top: 10px;
+            }
+        }
+        .right_area{
+            .form_inner{
+                display: flex;
+                justify-content: end;
+                gap: 15px;
+                .form-group{
+                    flex-shrink: 0;
+                    width: 400px;
+                    max-width: 100%;
+                }
+                .button_area{
+                    button{
+                        display: inline-block;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.footer_section{
+    padding-top: 40px;
+    background-color: variable.$charcol;
+    .parent_area{
+        .upper_area{
+            .inner_area{
+                &.inner4{
+                    ul{
+                        li{
+                            display: flex;
+                            gap: 10px;
+                            i{
+                                font-size: 18px;
+                                color: variable.$white;
+                            }
+                        }
+                    }
+                }
+                .logo_area{
+                    width: 200px;
+                    height: 41px;
+                    filter: brightness(0) invert(1);
+                }
+                p{
+                    padding-top: 15px;
+                    color: variable.$grey;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;
+                }
+                h3{
+                    font-size: 25px;
+                    font-weight: 600;
+                    color: variable.$white;
+                    position: relative;
+                    padding-left: 40px;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: 30px;
+                        height: 4px;
+                        background-color: variable.$primary_color;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                    }
+                }
+                ul{
+                    li{
+                        padding-top: 12px;
+                        a{
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: variable.$grey;
+                            &:hover{
+                                color: variable.$white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .lower_area{
+            margin-top: 40px;
+            border-top: 1px solid variable.$white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+            .left_area{
+                ul{
+                    display: flex;
+                    gap: 15px;
+                    li{
+                        &:hover{
+                            a{
+                                @include mixins.rotate(360deg);
+                            }
+                        }
+                        a{
+                            display: inline-block;
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 50%;
+                            text-align: center;
+                            align-content: center;
+                            &.fb{
+                                background-color: variable.$facebook;
+                            }
+                            &.twitter{
+                                background-color: variable.$twitter;
+                            }
+                            &.linkedin{
+                                background-color: variable.$linkedin;
+                            }
+                            &.pin{
+                                background-color: variable.$pinterest;
+                            }
+                            i{
+                                color: variable.$white;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .middle_area{
+                p{
+                    font-size: 16px;
+                    color: variable.$white;
+                    font-weight: 400;
+                }
+            }
+            .right_area{
+                display: flex;
+                gap: 15px;
+                .img_area{
+                    background-color: variable.$white;
+                    height: 20px;
+                    width: 40px;
+                    overflow: hidden;
+                    img{
+                        // object-fit: fill;
+                        position: relative;
+                        top: -2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* 1680 desktop */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* 1600 desktop */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Above 1400 and Below 1599 Desktop*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+/* 1300 desktop only */
+@media (min-width: 1300px) and (max-width: 1399px) {}
+
+/* 1200 desktop only */
+@media (min-width: 1200px) and (max-width: 1299px) {}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .newsletter_section{
+        padding: 30px 0;
+        .parent_area{
+            .left_area{
+                h3{
+                    font-size: 22px;
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
+            .right_area{
+                .form_inner{
+                    .form-group{
+                        width: 340px;
+                    } 
+                }
+            }
+        }
+    }
+
+    .footer_section{
+        padding-top: 30px;
+        .parent_area{
+            .upper_area{
+                .inner_area{
+                    p{
+                        font-size: 15px;
+                    }
+                    h3{
+                        font-size: 20px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            .lower_area{
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .newsletter_section{
+        padding: 30px 0;
+        .parent_area{
+            .left_area{
+                h3{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
+            .right_area{
+                .form_inner{
+                    .form-group{
+                        width: 270px;
+                    } 
+                }
+            }
+        }
+    }
+
+    .footer_section{
+        padding-top: 30px;
+        .parent_area{
+            .upper_area{
+                .row{
+                    row-gap: 15px;
+                }
+                .inner_area{
+                    p{
+                        font-size: 15px;
+                    }
+                    h3{
+                        font-size: 20px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            .lower_area{
+                margin-top: 30px;
+                .middle_area{
+                    p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .newsletter_section{
+        padding: 25px 0;
+        .parent_area{
+            .left_area{
+                h3{
+                    font-size: 20px;
+                    text-align: center;
+                }
+                p{
+                    font-size: 14px;
+                    padding-top: 8px;
+                    text-align: center;
+                }
+            }
+            .right_area{
+                padding-top: 15px;
+                .form_inner{
+                    justify-content: center;
+                    .form-group{
+                        width: 270px;
+                    } 
+                }
+            }
+        }
+    }
+
+    .footer_section{
+        padding-top: 30px;
+        .parent_area{
+            .upper_area{
+                .row{
+                    row-gap: 15px;
+                }
+                .inner_area{
+                    p{
+                        font-size: 14px;
+                    }
+                    h3{
+                        font-size: 18px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .lower_area{
+                margin-top: 30px;
+                padding: 15px 0;
+                .left_area{
+                    ul{
+                        gap: 12px;
+                        li{
+                            a{
+                                height: 30px;
+                                width: 30px;
+                                i{
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle_area{
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+    .newsletter_section{
+        padding: 25px 0;
+        .parent_area{
+            .left_area{
+                h3{
+                    font-size: 18px;
+                    text-align: center;
+                }
+                p{
+                    font-size: 14px;
+                    padding-top: 8px;
+                    text-align: center;
+                }
+            }
+            .right_area{
+                padding-top: 15px;
+                .form_inner{
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    .form-group{
+                        width: 100%;
+                    } 
+                }
+            }
+        }
+    }
+
+    .footer_section{
+        padding-top: 25px;
+        .parent_area{
+            .upper_area{
+                .row{
+                    row-gap: 15px;
+                }
+                .inner_area{
+                    p{
+                        font-size: 14px;
+                    }
+                    h3{
+                        font-size: 18px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .lower_area{
+                margin-top: 25px;
+                padding: 15px 0;
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: center;
+                .left_area{
+                    width: 100%;
+                    ul{
+                        gap: 12px;
+                        justify-content: center;
+                        li{
+                            a{
+                                height: 30px;
+                                width: 30px;
+                                i{
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle_area{
+                    order: 2;
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .newsletter_section{
+        padding: 25px 0;
+        .parent_area{
+            .left_area{
+                h3{
+                    font-size: 18px;
+                    text-align: center;
+                }
+                p{
+                    font-size: 14px;
+                    padding-top: 8px;
+                    text-align: center;
+                }
+            }
+            .right_area{
+                padding-top: 15px;
+                .form_inner{
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    .form-group{
+                        width: 100%;
+                    } 
+                }
+            }
+        }
+    }
+
+    .footer_section{
+        padding-top: 25px;
+        .parent_area{
+            .upper_area{
+                .row{
+                    row-gap: 15px;
+                }
+                .inner_area{
+                    p{
+                        font-size: 14px;
+                    }
+                    h3{
+                        font-size: 18px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .lower_area{
+                margin-top: 25px;
+                padding: 15px 0;
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: center;
+                .left_area{
+                    width: 100%;
+                    ul{
+                        gap: 12px;
+                        justify-content: center;
+                        li{
+                            a{
+                                height: 30px;
+                                width: 30px;
+                                i{
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle_area{
+                    order: 2;
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}

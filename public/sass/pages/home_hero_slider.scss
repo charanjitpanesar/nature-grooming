@@ -1,0 +1,280 @@
+@use "../base/variable.scss" as variable;
+@use "../base/mixins.scss" as mixins;
+
+.home_hero_section{
+    .slider_area{
+        .swiper-pagination{
+            bottom: 40px;
+            .swiper-pagination-bullet{
+                &.swiper-pagination-bullet-active{
+                    background-color: variable.$black;
+                }
+                height: 15px;
+                width: 15px;
+                background-color: variable.$white;
+                border-radius: 0;
+                opacity: 1;
+            }
+        }
+        .slide_inner{
+            height: 650px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            .image_area{
+                position: absolute;
+                inset: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+            }
+            .parent_area{
+                .card_area{
+                    padding: 30px 40px;
+                    background: variable.$white;
+                    width: 420px;
+                    max-width: 100%;
+                    margin-left: auto;
+                    h5{
+                        font-size: 30px;
+                        color: variable.$black;
+                        font-weight: 300;
+                        position: relative;
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: -4px;
+                            width: 50px;
+                            height: 2px;
+                            background-color: variable.$primary_color;
+                        }
+                    }
+                    h3{
+                        font-size: 50px;
+                        font-weight: 400;
+                        color: variable.$black;
+                        padding-top: 15px;
+                    }
+                    .button_area{
+                        padding-top: 30px;
+                        .btn-primary{
+                            border-radius: 100px;
+                            padding: 10px 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/* 1680 desktop */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* 1600 desktop */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Above 1400 and Below 1599 Desktop*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+/* 1300 desktop only */
+@media (min-width: 1300px) and (max-width: 1399px) {
+    .home_hero_section{
+        .slider_area{
+            .slide_inner{
+                height: 580px;
+            } 
+        }
+    }
+
+}
+
+/* 1200 desktop only */
+@media (min-width: 1200px) and (max-width: 1299px) {
+    .home_hero_section{
+        .slider_area{
+            .slide_inner{
+                height: 580px;
+            } 
+        }
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .home_hero_section{
+        .slider_area{
+            .slide_inner{
+                height: 580px;
+                .parent_area{
+                    .card_area{
+                        width: 360px;
+                        h3{
+                            font-size: 45px;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .home_hero_section{
+        .slider_area{
+            .swiper-pagination{
+                bottom: 25px;
+            }
+            .slide_inner{
+                height: 430px;
+                .parent_area{
+                    .card_area{
+                        width: 285px;
+                        padding: 20px 30px;
+                        h5{
+                            font-size: 25px;
+                        }
+                        h3{
+                            padding-top: 10px;
+                            font-size: 38px;
+                        }
+                        .button_area{
+                            padding-top: 20px;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .home_hero_section{
+        .slider_area{
+            .swiper-pagination{
+                bottom: 15px;
+                .swiper-pagination-bullet{
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+            .slide_inner{
+                height: 340px;
+                .parent_area{
+                    .card_area{
+                        width: 230px;
+                        padding: 20px 20px;
+                        h5{
+                            font-size: 20px;
+                            &::after{
+                                width: 35px;
+                            }
+                        }
+                        h3{
+                            padding-top: 10px;
+                            font-size: 28px;
+                        }
+                        .button_area{
+                            padding-top: 20px;
+                            .btn-primary{
+                                padding: 8px 20px;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+    .home_hero_section{
+        .slider_area{
+            .swiper-pagination{
+                bottom: 15px;
+                .swiper-pagination-bullet{
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+            .slide_inner{
+                height: 300px;
+                .parent_area{
+                    .card_area{
+                        width: 230px;
+                        padding: 20px 20px;
+                        margin: 0 auto;
+                        h5{
+                            font-size: 20px;
+                            &::after{
+                                width: 35px;
+                            }
+                        }
+                        h3{
+                            padding-top: 10px;
+                            font-size: 28px;
+                        }
+                        .button_area{
+                            padding-top: 20px;
+                            .btn-primary{
+                                padding: 8px 20px;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .home_hero_section{
+        .slider_area{
+            .swiper-pagination{
+                bottom: 15px;
+                .swiper-pagination-bullet{
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+            .slide_inner{
+                height: 300px;
+                .parent_area{
+                    .card_area{
+                        width: 230px;
+                        padding: 20px 20px;
+                        margin: 0 auto;
+                        h5{
+                            font-size: 20px;
+                            &::after{
+                                width: 35px;
+                            }
+                        }
+                        h3{
+                            padding-top: 10px;
+                            font-size: 28px;
+                        }
+                        .button_area{
+                            padding-top: 20px;
+                            .btn-primary{
+                                padding: 8px 20px;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}
