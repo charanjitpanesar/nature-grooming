@@ -43,7 +43,7 @@ const HomeHeroSection = () => {
                                                     <div className='parent_area'>
                                                         <div className='card_area'>
                                                             <h5>30% Discount</h5>
-                                                            <h3>Latest Men's Collection</h3>
+                                                            <h3>Latest Men Collection</h3>
                                                             <div className='button_area'>
                                                                 <Link href="/" className="btn-primary" >Shop Now</Link>
                                                             </div>

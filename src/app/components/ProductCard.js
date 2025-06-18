@@ -34,7 +34,7 @@ const ProductCard = ({commonCardDataProps}) => {
                             </li>
                         </ul>
                     </div>
-                    <h6>Men's Grooming Shaving</h6>
+                    <h6>Men&apos; Grooming Shaving</h6>
                     <div className='price_area'>
                         <div className='actual_price'>$80.00</div>
                         <div className='off_price'>$100.00</div>

@@ -109,7 +109,7 @@ const ProductListing = () => {
                                                 </Dropdown>
                                                 <span>Per page</span>
                                             </div>
-                                            <div className='filter_btn btn-primary' onClick={toggleSidebar}>
+                                            <div className='filter_btn btn-primary d-lg-none d-block' onClick={toggleSidebar}>
                                                 Filter
                                             </div>
                                         </div>
