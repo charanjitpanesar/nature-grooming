@@ -132,7 +132,7 @@ const ProductGallerySlider = () => {
                                     </Col>
                                     <Col xxl={7} xl={7} lg={7} md={7} sm={7} xs={12}>
                                         <div className='right_area'>
-                                            <h3>Men &apos; Grooming Shaving(With 2 Blades)</h3>
+                                            <h3>Men&apos;s Grooming Shaving(With 2 Blades)</h3>
                                             <div className='star_list'>
                                                 <ul>
                                                     <li className="active"><i className="bi bi-star-fill"></i></li>
